@@ -1,0 +1,22 @@
+{
+  "name": "simple_webapp",
+  "version": "0.1.0",
+  "description": "Just simple app!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessie-txt/simple-webapp.git"
+  },
+  "author": "Jesaya Fernando Napitupulu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessie-txt/simple-webapp/issues"
+  },
+  "homepage": "https://github.com/jessie-txt/simple-webapp#readme",
+  "dependencies": {
+    "hapi": "^18.1.0"
+  }
+}
