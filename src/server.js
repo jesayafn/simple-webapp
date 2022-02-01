@@ -1,4 +1,4 @@
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
 const config = require('./conf');
 
@@ -6,8 +6,7 @@ const config = require('./conf');
 
 const init = async () => {
   const server = Hapi.server({
-    port: config.serverConfiguration.port,
-    host: config.serverConfiguration.hostname,
+    port: config.serverConfiguration.port
   });
   server.route(routes);
 

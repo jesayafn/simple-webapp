@@ -1,6 +1,5 @@
 const serverConfiguration = {
-    hostname: 'localhost',
-    port: 8080,
+    port: 80
   };
   
   module.exports={serverConfiguration};
