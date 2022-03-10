@@ -6,7 +6,8 @@ const config = require('./conf');
 
 const init = async () => {
   const server = Hapi.server({
-    port: config.serverConfiguration.port
+    port: config.serverConfiguration.port,
+    host: config.serverConfiguration.hostname,
   });
   server.route(routes);
 
