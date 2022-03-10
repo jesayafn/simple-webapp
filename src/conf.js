@@ -1,5 +1,4 @@
 const serverConfiguration = {
-    hostname: 'localhost',
     port: 8080,
   };
   
