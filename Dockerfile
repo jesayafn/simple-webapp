@@ -1,4 +1,4 @@
-FROM node:14.17.0-alpine
+FROM docker.io/library/node:14.17.0-alpine
 
 RUN mkdir /simple_webapp && mkdir /simple_webapp/src
 
