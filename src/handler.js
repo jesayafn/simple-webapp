@@ -1,12 +1,12 @@
 const os = require("os");
-const http = require("https");
+const https = require("https");
 
 const getHostname = async (request, h) => {
     const hostname = os.hostname
     const response = h.response('This node or container hostname is '+ hostname);
     return response;
 };
-const getDadJokes = async (requst, h) => {
+const getDadJokes = async (request, h) => {
     const dadJokesApi = {
         hostname: "icanhazdadjoke.com",
         method: 'GET',
@@ -15,7 +15,11 @@ const getDadJokes = async (requst, h) => {
             Accept: "text/plain",
         },
     }
-    const dadJokes = http.request(dadJokesApi);
+    const dadJokes = https.request(dadJokesApi, function (res) {
+        res.on('data', function(body){
+            return body;
+        });
+    });
     const response = h.response(dadJokes);
     return response;
 };
