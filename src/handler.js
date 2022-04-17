@@ -20,6 +20,7 @@ const getDadJokes = async (request, h) => {
             return body;
         });
     });
+    request.log('error', 'Event error');
     const response = h.response(dadJokes);
     return response;
 };
