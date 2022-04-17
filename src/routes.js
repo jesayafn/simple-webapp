@@ -9,9 +9,15 @@ const access = {
 const routes = [
   {
     method: 'GET',
-    path: '/',
-    handler: handler.get.getHostName,
+    path: ['/','/hostname'],
+    handler: handler.get.getHostname,
     options: access,
   },
+  {
+    method: 'GET',
+    path: '/dad-jokes',
+    handler: handler.get.getDadJokes,
+    options: access,
+  }
 ];
 module.exports = routes;
