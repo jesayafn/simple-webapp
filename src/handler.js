@@ -11,16 +11,13 @@ const getDadJokes = async (request, h) => {
         hostname: "icanhazdadjoke.com",
         method: 'GET',
         path: '/', 
-        header: {
-            Accept: "text/plain",
+        headers: {
+            'Accept': "text/plain",
         },
     }
-    const dadJokes = https.request(dadJokesApi, function (res) {
-        res.on('data', function(body){
-            return body;
+    const dadJokes = https.request(dadJokesApi, (res) => {
+            res.on('data', (body) => body);
         });
-    });
-    request.log('error', 'Event error');
     const response = h.response(dadJokes);
     return response;
 };
