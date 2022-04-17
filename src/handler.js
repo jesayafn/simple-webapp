@@ -8,18 +8,15 @@ const getHostname = async (request, h) => {
 };
 const getDadJokes = async (request, h) => {
     const apiConfig = {
-        url: 'https://icanhazdadjoke.com',
-        path: '/', 
+        baseURL: 'https://icanhazdadjoke.com',
+        url: '/',
         method: 'get',
         headers: {
             'Accept': 'text/plain',
         },
     }
-    const dadJokes = await axios.request(apiConfig).then(response => {
-        const jokes = response.data;
-        return jokes
-    })
-    const response = h.response(dadJokes());
+    const dadJokes = await axios.request(apiConfig)
+    const response = h.response(dadJokes.data);
     return response;
 };
 
