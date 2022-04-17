@@ -9,7 +9,13 @@ const access = {
 const routes = [
   {
     method: 'GET',
-    path: ['/','/hostname'],
+    path: '/',
+    handler: handler.get.getHostname,
+    options: access,
+  },
+  {
+    method: 'GET',
+    path: '/hostname',
     handler: handler.get.getHostname,
     options: access,
   },
