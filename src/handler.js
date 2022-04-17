@@ -1,5 +1,5 @@
 const os = require('os');
-const https = require('https');
+const axios = require('axios');
 
 const getHostname = async (request, h) => {
     const hostname = os.hostname
@@ -7,21 +7,19 @@ const getHostname = async (request, h) => {
     return response;
 };
 const getDadJokes = async (request, h) => {
-    const dadJokesApi = {
-        hostname: 'icanhazdadjoke.com',
-        method: 'GET',
+    const apiConfig = {
+        url: 'https://icanhazdadjoke.com',
         path: '/', 
+        method: 'get',
         headers: {
             'Accept': 'text/plain',
         },
     }
-    https.request(dadJokesApi, async (res) => {
-        res.on('data', (body) =>{
-            dadJokes = body;
-        });
-        res.end();
-    }); 
-    const response = h.response(dadJokes);
+    const dadJokes = await axios.request(apiConfig).then(response => {
+        const jokes = response.data;
+        return jokes
+    })
+    const response = h.response(dadJokes());
     return response;
 };
 
