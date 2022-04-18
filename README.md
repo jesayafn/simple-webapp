@@ -2,4 +2,4 @@
 
 /hostaname : Return hostname value
 
-/dad-jokes : Return dad jokes from <https://icanhazdadjoke.com/>
+/lucky-number : Return lucky number value
