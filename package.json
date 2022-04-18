@@ -19,6 +19,6 @@
   "homepage": "https://github.com/jessie-txt/simple-webapp#readme",
   "dependencies": {
     "@hapi/hapi": "^20.2.1",
-    "axios": "^0.26.1"
+    "random": "^3.0.6"
   }
 }

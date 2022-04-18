@@ -1,6 +1,6 @@
-const Hapi = require('@hapi/hapi');
-const routes = require('./routes');
-const config = require('./conf');
+const Hapi =  require('@hapi/hapi')
+const routes = require('./routes.js');
+const config = require('./conf.js');
 
 
 

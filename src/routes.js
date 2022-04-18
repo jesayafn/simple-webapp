@@ -1,4 +1,4 @@
-const handler= require('./handler');
+const handler= require('./handler.js');
 
 const access = {
   cors: {
@@ -21,8 +21,8 @@ const routes = [
   },
   {
     method: 'GET',
-    path: '/dad-jokes',
-    handler: handler.get.getDadJokes,
+    path: '/lucky-number',
+    handler: handler.get.getLuckyNumber,
     options: access,
   }
 ];
