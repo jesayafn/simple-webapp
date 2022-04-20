@@ -12,4 +12,4 @@ RUN npm i
 
 EXPOSE 80
 
-ENTRYPOINT [ "npm","run","start-server" ]
+ENTRYPOINT [ "npm","run","start" ]
